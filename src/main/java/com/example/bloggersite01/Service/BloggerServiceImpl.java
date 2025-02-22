@@ -38,11 +38,12 @@ public class BloggerServiceImpl implements BloggerService {
 
     @Override
     public Blog addBlogger(Blog blog) throws Exception {
-        return null;
+        return blogRepository.save(blog);
     }
 
     @Override
     public void deleteBlogger(Long id) throws Exception {
-
+        blogRepository.deleteById(id);
+        // if there is matching od for blogger then that blog will be deleted in here....
     }
 }
