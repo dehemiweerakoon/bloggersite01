@@ -1,9 +1,6 @@
 package com.example.bloggersite01.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 
 @Entity
@@ -12,8 +9,11 @@ public class Blog {
     @Id
     private long id;
 
+    @Column(nullable = false,unique = true)
     private String title;
 
+    @Lob
+    @Column(columnDefinition = "TEXT")
     private String content;
     //
 
@@ -22,6 +22,10 @@ public class Blog {
     public Blog(String title, String content) {
         this.title = title;
         this.content = content;
+    }
+
+    public Blog(long blogId) {
+        this.id = blogId;
     }
 
     public long getId() {
