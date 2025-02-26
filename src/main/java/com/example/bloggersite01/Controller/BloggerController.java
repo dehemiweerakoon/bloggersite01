@@ -1,7 +1,6 @@
 package com.example.bloggersite01.Controller;
 
 import com.example.bloggersite01.Entity.Blog;
-import com.example.bloggersite01.Repository.BlogRepository;
 import com.example.bloggersite01.Service.BloggerService;
 import com.example.bloggersite01.payload.BloggerSite;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,7 +36,9 @@ public class BloggerController {
     @GetMapping("/{id}")
     public ResponseEntity<?> getBlogger(@PathVariable Long id) {
         try {
-            return ResponseEntity.status(HttpStatus.OK).body(bloggerService.getBlogger(id));
+           Blog blog =   bloggerService.getBlogger(id);
+
+            return ResponseEntity.status(HttpStatus.OK).body(new BloggerSite(blog.getId(),blog.getTitle(),blog.getContent(),blog.getUser().getUsername()));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
         }
