@@ -17,6 +17,10 @@ public class Blog {
     private String content;
     //
 
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
     public Blog() {
     }
     public Blog(String title, String content) {
