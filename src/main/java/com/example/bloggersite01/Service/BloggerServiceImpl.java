@@ -38,6 +38,7 @@ public class BloggerServiceImpl implements BloggerService {
 
     @Override
     public Blog addBlogger(Blog blog) throws Exception {
+        System.out.println(blog.getUser().getUsername());
         return blogRepository.save(blog);
     }
 

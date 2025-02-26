@@ -22,10 +22,27 @@ public class Blog {
     private User user;
 
     public Blog() {
+        // blog basic construct...
     }
+
     public Blog(String title, String content) {
         this.title = title;
         this.content = content;
+    }
+
+    public Blog(long id, String title, String content, User user) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+        this.user = user;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public Blog(long blogId) {
