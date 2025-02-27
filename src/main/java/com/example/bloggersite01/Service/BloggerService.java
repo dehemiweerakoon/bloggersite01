@@ -13,4 +13,5 @@ public interface BloggerService {
     Blog updateBlogger(Blog blog)  throws Exception;
     Blog addBlogger(Blog blog) throws Exception;
     void deleteBlogger(Long id) throws Exception;
+    List<Blog> getBlogsOfUser(Long id) throws Exception;
 }

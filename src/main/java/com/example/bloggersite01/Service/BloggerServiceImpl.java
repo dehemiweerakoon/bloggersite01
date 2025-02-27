@@ -1,6 +1,7 @@
 package com.example.bloggersite01.Service;
 
 import com.example.bloggersite01.Entity.Blog;
+import com.example.bloggersite01.Entity.User;
 import com.example.bloggersite01.Repository.BlogRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -46,5 +47,11 @@ public class BloggerServiceImpl implements BloggerService {
     public void deleteBlogger(Long id) throws Exception {
         blogRepository.deleteById(id);
         // if there is matching od for blogger then that blog will be deleted in here....
+    }
+
+    @Override
+    public List<Blog> getBlogsOfUser(Long id) throws Exception {
+// get blogs for the specified user and user id
+        return blogRepository.findBlogsByUser(new User(id));
     }
 }

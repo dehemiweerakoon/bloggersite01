@@ -73,4 +73,17 @@ public class BloggerController {
            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
         }
     }
+    @GetMapping("/user/{id}")
+    public ResponseEntity<?> getUserBlogger(@PathVariable Long id) {
+        try {
+            List<BloggerSite> bloggerList = new ArrayList<>();
+            List<Blog> blogs = bloggerService.getBlogsOfUser(id);
+            for (Blog blog : blogs) {
+                bloggerList.add(new BloggerSite(blog.getId(),blog.getTitle(),blog.getContent(),blog.getUser().getUsername()));
+            }
+            return ResponseEntity.status(HttpStatus.OK).body(bloggerList);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
+        }
+    }
 }
