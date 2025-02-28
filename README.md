@@ -18,10 +18,10 @@ This is a blogging platform built using Spring Boot that allows users to registe
 
 # Technologies Used
 
-Backend: Spring Boot, Spring Security, Spring Data JPA, Hibernate, MySQL
+* Backend: Spring Boot, Spring Security, Spring Data JPA, Hibernate, MySQL
 
-Authentication: JWT (JSON Web Token)
+* Authentication: JWT (JSON Web Token)
 
-Database: MySQL
+* Database: MySQL
 
-Build Tool: Maven
+* Build Tool: Maven
