@@ -25,3 +25,49 @@ This is a blogging platform built using Spring Boot that allows users to registe
 * Database: MySQL
 
 * Build Tool: Maven
+
+# Installation & Setup
+
+**Prerequisites**
+
+1. Java 17+
+
+2. MySQL Database
+
+3. Maven
+
+**Steps to Run**
+
+1. Clone the repository
+   ```
+   git clone https://github.com/your-repo/springboot-blogger.git
+   cd springboot-blogger
+   ```
+2. Configure MySQL Database
+
+   Update *application.properties* in *src/main/resources/*:
+   ```
+   spring.datasource.url=jdbc:mysql://localhost:3306/blog_db
+   spring.datasource.username=root
+   spring.datasource.password=yourpassword
+   spring.jpa.hibernate.ddl-auto=update
+   spring.jpa.show-sql=true
+   ```
+3. Build and Run the Application
+   ```
+   mvn clean install
+   mvn spring-boot:run
+   ```
+![image](https://github.com/user-attachments/assets/d7c37f0e-362c-4f3f-b639-70c5266d3d47)
+
+
+# Security
+
+  -Passwords are encrypted using BCrypt.
+  
+  -JWT is used for secure authentication and authorization.
+
+
+
+
+
