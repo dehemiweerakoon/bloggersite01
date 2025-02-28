@@ -6,15 +6,15 @@ This is a blogging platform built using Spring Boot that allows users to registe
 
 # Features
 
-1.User Registration
+1. User Registration
 
-2.User Login & Authentication (Spring Security & JWT)
+2. User Login & Authentication (Spring Security & JWT)
 
-3.Create, Read, Update, and Delete (CRUD) operations for blog posts
+3. Create, Read, Update, and Delete (CRUD) operations for blog posts
 
-4.Role-based Access Control (Admin/User)
+4. Role-based Access Control (Admin/User)
 
-5.RESTful API endpoints
+5. RESTful API endpoints
 
 # Technologies Used
 
