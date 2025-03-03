@@ -40,7 +40,7 @@ This is a blogging platform built using Spring Boot that allows users to registe
 
 1. Clone the repository
    ```
-   git clone https://github.com/your-repo/springboot-blogger.git
+   git clone https://github.com/dehemiweerakoon/bloggersite01
    cd springboot-blogger
    ```
 2. Configure MySQL Database
